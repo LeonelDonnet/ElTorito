@@ -1,2 +1,0 @@
-# ElTorito
-LandingPage El torito
