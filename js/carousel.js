@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function startAutoPlay() {
         stopAutoPlay();
-        intervalId = setInterval(nextSlide, 5000); // 5s cada imagen
+        intervalId = setInterval(nextSlide, 5000); // 5s c/ imagen
     }
 
     function stopAutoPlay() {

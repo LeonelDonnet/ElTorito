@@ -11,6 +11,32 @@ body {
     line-height: 1.6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+    
+    .about-section,
+    .gallery-section,
+    .map-section {
+        scroll-margin-top: 70px;
+    }
+}
+
+
 /* HEADER */
 header {
     background: #020303;
@@ -66,7 +92,120 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* CARRUSEL MEJORADO */
+
+/* SECCIÓN SOBRE NOSOTROS */
+.about-section {
+    padding: 40px 20px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.simple-about-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #020303;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.about-header {
+    margin-bottom: 30px;
+}
+
+.about-header h2 {
+    font-size: 1.8rem;
+    color: #020303;
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-header h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: #C42429;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-text-content {
+    text-align: left;
+}
+
+.about-text-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 30px 20px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+        margin-bottom: 15px; 
+    }
+    
+    .about-header {
+        margin-bottom: 25px; 
+    }
+    
+    .about-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .about-text-content p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 25px 15px;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+    
+    .about-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .about-text-content p {
+        text-align: left;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+
+/* CARRUSEL */
 .carousel-section {
     padding: 40px 0;
     background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
@@ -196,7 +335,7 @@ nav a:hover::after {
 }
 
 .map-container {
-    max-width: 900px;
+    max-width: 600px; /* Cambiado a 600px (más pequeño) */
     margin: 0 auto;
     border-radius: 12px;
     overflow: hidden;

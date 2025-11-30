@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movimientos de Suelo - El Torito</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ESTILOS PARA EL SCROLL SUAVE */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Ajuste de padding para las secciones (para que no quede detrás del header fijo) */
+        #sobre-nosotros,
+        #galeria,
+        #contacto {
+            scroll-margin-top: 80px;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,16 +25,46 @@
         <div class="header-container">
             <img src="data/logo.png" alt="Logo El Torito" class="logo" />
             <nav>
-                <a href="#sobre">Sobre nosotros</a>
-                <a href="#servicios">Servicios</a>
+                <!-- MODIFICADO: Agregados los IDs en los href -->
+                <a href="#sobre-nosotros">Sobre nosotros</a>
                 <a href="#galeria">Galería</a>
                 <a href="#contacto">Contacto</a>
             </nav>
         </div>
     </header>
 
-    <!-- CARRUSEL MEJORADO -->
-    <section class="carousel-section">
+    <!-- MODIFICADO: Agregado id="sobre-nosotros" -->
+    <section id="sobre-nosotros" class="about-section">
+        <div class="container">
+            <div class="simple-about-content">
+                <h1 class="main-title">El Torito</h1>
+                
+                <div class="about-header">
+                    <h2>Sobre Nosotros</h2>
+                </div>
+                
+                <div class="about-text-content">
+                    <p>
+                        Somos una empresa joven con más de 15 años de experiencia
+                        especializada en canalizaciones, nivelación de terrenos, desmontes,
+                        limpieza, y venta de tierra para compactación y tierra negra para jardines
+                        y patios. Realizamos también colocación de alcantarillas, estudios
+                        topográficos, desarrollo de loteos y una amplia variedad de servicios
+                        vinculados al movimiento de suelos.
+                    </p>
+                    
+                    <p>
+                        Trabajamos con un enfoque permanente en la eficiencia, la mejora
+                        continua y la satisfacción de nuestros clientes, brindando soluciones
+                        confiables y de alta calidad en cada proyecto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODIFICADO: Agregado id="galeria" -->
+    <section id="galeria" class="carousel-section">
         <div class="carousel-container">
             <div class="carousel-slide">
                 <div class="carousel-item">
@@ -47,7 +90,7 @@
             <button class="carousel-btn left" onclick="prevSlide()">&#10094;</button>
             <button class="carousel-btn right" onclick="nextSlide()">&#10095;</button>
             
-            <!-- Indicadores de posición -->
+            <!-- posición -->
             <div class="carousel-indicators">
                 <span class="indicator active" data-index="0"></span>
                 <span class="indicator" data-index="1"></span>
@@ -59,11 +102,11 @@
         </div>
     </section>
 
-    <!-- MAPA MEJORADO -->
-    <section class="map-section">
+    <!-- MODIFICADO: Agregado id="contacto" -->
+    <section id="contacto" class="map-section">
         <div class="section-title">
             <h2>Ubicación</h2>
-            <p>Encuéntranos fácilmente</p>
+            <p>Ignacio Falichini 603 - San Jeronimo Nte - Santa Fe</p>
         </div>
         <div class="map-container">
             <iframe 
@@ -84,18 +127,17 @@
 
             <div class="footer-right">
                 <h3>Contacto</h3>
-                <p><strong>Tel:</strong> 0000-000000</p>
+                <p><strong>Tel:</strong> 342-5174530</p>
                 <p><strong>Email:</strong> empresa@correo.com</p>
 
                 <div class="social">
-                    <a href="#" aria-label="Facebook">Facebook</a>
-                    <a href="#" aria-label="Instagram">Instagram</a>
-                    <a href="#" aria-label="WhatsApp">WhatsApp</a>
+                    <a href="https://www.instagram.com/eltorito.mov.desuelos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                    <a href="https://wa.me/5493425174530?text=Hola%20me%20interesa%20sus%20servicios%20de%20movimiento%20de%20suelos" aria-label="WhatsApp">WhatsApp</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 Movimientos de Suelo El Torito. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Movimientos de Suelo El Torito. Todos los derechos reservados.</p>
         </div>
     </footer>
 
